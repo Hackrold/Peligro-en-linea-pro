@@ -40,7 +40,7 @@
                     <p><strong>📌 IP:</strong> ${ipUsuario}</p>
                     <p><strong>📍 Ubicación:</strong> ${ubicacionUsuario}</p>
                     <p><strong>🌐 Navegador:</strong> ${navigator.userAgent}</p>
-                    <p><strong>🔄 Veces que se ha ejecutado este enlace:</strong> ${contador}</p>
+                    <p><strong>🔄 Veces que se ejecutó este enlace:</strong> ${contador}</p>
                     <p class="rojo"><strong>Se procederá a bloquear tu cuenta en <span id="timer">20</span> segundos...</strong></p>
                     <button id="recuperar">🔓 Recuperar Cuenta</button>
                 </div>
@@ -69,19 +69,18 @@
 
         function mostrarAvisoFinal() {
             document.body.innerHTML = `
-                <div class="mensaje-final">
-                    <h2>🔒 Ejercicio de Ciberseguridad Completado 🔒</h2>
-                    <p>🔹 <strong>IMPORTANTE:</strong> Esta es una simulación controlada bajo la supervisión del Ing. Harold López Cardona, especialista en ciberseguridad.</p>
-                    <p>✅ Este ejercicio es voluntario, con fines educativos. Sus datos y cuenta NO fueron comprometidos y NO están en riesgo.</p>
+                <div class="aviso-final">
+                    <h1>🔐 Ejercicio de CIBERATAQUE simulado Terminado</h1>
+                    <p>Esta simulación ha sido supervisada por el Ing. Harold López Cardona, especialista en ciberseguridad.</p>
+                    <p>✅ Este ejercicio es voluntario, con fines educativos, sus datos y cuenta NO se comprometieron y NO están en riesgo.</p>
                     <p>🙏 Gracias por participar y su compromiso con esta capacitación en ciberseguridad.</p>
-                </div>
-                <audio id="proteccion" src="https://www.soundjay.com/button/beep-09.mp3" autoplay></audio>
-                <div class="animacion">
-                    <img src="https://media.giphy.com/media/3o7TKrMPiWRWgfuZaE/giphy.gif" alt="Protección activa">
+                    <img src="https://media.tenor.com/J-w5FUWA17sAAAAM/hacker.gif" alt="Hacker Ético" class="animacion-hacker">
+                    <audio id="proteccion" src="https://www.soundjay.com/button/beep-07.mp3" autoplay></audio>
                 </div>
             `;
+
             setTimeout(() => {
-                document.body.innerHTML = "";
+                window.location.href = "https://www.larepublica.co/ataques-ciberneticos";
             }, 20000);
         }
 
@@ -94,10 +93,9 @@
         .rojo { color: red; font-size: 20px; }
         button { background: red; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; }
         button:hover { background: darkred; }
-        .mensaje-final { margin-top: 30px; padding: 20px; background: #222; border-radius: 10px; box-shadow: 0px 0px 10px gray; }
-        .mensaje-final p { color: lightgray; font-size: 14px; }
-        .animacion { margin-top: 20px; }
-        .animacion img { width: 200px; }
+        .aviso-final { padding: 20px; background: #222; border-radius: 10px; box-shadow: 0px 0px 10px gray; }
+        .aviso-final p { color: lightgray; font-size: 14px; }
+        .animacion-hacker { width: 150px; margin-top: 20px; }
     </style>
 </head>
 <body>
